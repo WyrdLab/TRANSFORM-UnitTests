@@ -203,6 +203,183 @@
           }
         ]
       }
+    },
+    {
+      "model": "TRANSFORMTest.Fluid.Machines.Pump_ZeroSpeed",
+      "description": "With the Quadratic head curve each pump's flow over nominal matches the closed-form value within 1e-3 (it is within 4e-5) at full speed (to t = 0.9 s), half speed (2.5-3.9 s) and stopped (from 6 s): A, B (0.5 bar against): sqrt(1.75), 0.5, -0.5; C (0.5 bar with): 1.5, sqrt(0.75), 0.5; D, E (impeller 1.2x): sqrt(2.63*1.2^4), sqrt(0.47*1.2^4), -0.72; F (check valve, shutoff 3x): sqrt(1.375), 0.5, 0.",
+      "metrics": {
+        "combinator": "and",
+        "children": [
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": 1.321876,
+            "max_value": 1.323876,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": 1.321876,
+            "max_value": 1.323876,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[3]",
+            "min_value": 1.499,
+            "max_value": 1.501,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[4]",
+            "min_value": 2.334288,
+            "max_value": 2.336288,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[5]",
+            "min_value": 2.334288,
+            "max_value": 2.336288,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[6]",
+            "min_value": 1.171604,
+            "max_value": 1.173604,
+            "window": {
+              "end": 0.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": 0.499,
+            "max_value": 0.501,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": 0.499,
+            "max_value": 0.501,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[3]",
+            "min_value": 0.865025,
+            "max_value": 0.867025,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[4]",
+            "min_value": 0.986214,
+            "max_value": 0.988214,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[5]",
+            "min_value": 0.986214,
+            "max_value": 0.988214,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[6]",
+            "min_value": 0.499,
+            "max_value": 0.501,
+            "window": {
+              "start": 2.5,
+              "end": 3.9
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": -0.501,
+            "max_value": -0.499,
+            "window": {
+              "start": 6
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": -0.501,
+            "max_value": -0.499,
+            "window": {
+              "start": 6
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[3]",
+            "min_value": 0.499,
+            "max_value": 0.501,
+            "window": {
+              "start": 6
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[4]",
+            "min_value": -0.721,
+            "max_value": -0.719,
+            "window": {
+              "start": 6
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[5]",
+            "min_value": -0.721,
+            "max_value": -0.719,
+            "window": {
+              "start": 6
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[6]",
+            "min_value": -0.001,
+            "max_value": 0.001,
+            "window": {
+              "start": 6
+            }
+          }
+        ]
+      }
     }
   ]
 }
