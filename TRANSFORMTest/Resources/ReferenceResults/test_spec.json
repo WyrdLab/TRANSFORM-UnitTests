@@ -473,7 +473,46 @@
       "variables": [
         "kXe.reactivity.phi",
         "kXe.reactivity.rhos[3]"
-      ]
+      ],
+      "description": "Thermal-reactor physics, not the record's own numbers: U-235 uses 1 + alpha (about 1.17) atoms per fission (1.12-1.22 from 1e6 s; it is 1.169); 25 MW from 5.2 kg at 200 MeV per fission and about 587 b gives a flux near 1.0e18 n/(m2 s) (0.95e18-1.05e18; a fast set gives about 480 times more); equilibrium xenon worth between -2.50 % and -2.37 % from 6e5 s (it is -2.435 %; bounded by -gamma/nu); and it equals its closed form within 1e-3 (dRhoXe, below 2e-6).",
+      "metrics": {
+        "combinator": "and",
+        "children": [
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": 1.12,
+            "max_value": 1.22,
+            "window": {
+              "start": 1000000.0
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": -0.001,
+            "max_value": 0.001,
+            "window": {
+              "start": 600000.0
+            }
+          },
+          {
+            "metric": "range",
+            "variable": "kXe.reactivity.phi",
+            "min_value": 9.5e+17,
+            "max_value": 1.05e+18
+          },
+          {
+            "metric": "range",
+            "variable": "kXe.reactivity.rhos[3]",
+            "min_value": -0.025,
+            "max_value": -0.0237,
+            "window": {
+              "start": 600000.0
+            }
+          }
+        ]
+      }
     }
   ]
 }
