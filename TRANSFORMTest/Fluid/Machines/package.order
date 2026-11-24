@@ -3,3 +3,4 @@ Pump_OutletDensity
 Pump_ParallelPower
 Pump_PressureControl
 Pump_ZeroSpeed
+Pump_DiameterAffinity
