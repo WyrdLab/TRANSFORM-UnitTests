@@ -401,6 +401,27 @@
           }
         ]
       }
+    },
+    {
+      "model": "TRANSFORMTest.Fluid.Machines.Pump_SpeedAffinity",
+      "description": "At half speed and the similar operating point Pump_Controlled's head and power ratios follow the affinity laws (N^2, N^3): each gap must be within 1e-3 (they are 4e-5 and -7e-6, from the slightly denser water at the higher inlet pressure).",
+      "metrics": {
+        "combinator": "and",
+        "children": [
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": -0.001,
+            "max_value": 0.001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": -0.001,
+            "max_value": 0.001
+          }
+        ]
+      }
     }
   ]
 }
