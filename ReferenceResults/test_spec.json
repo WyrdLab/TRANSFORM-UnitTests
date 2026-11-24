@@ -492,6 +492,13 @@
           "timeout": 240
         }
       }
+    },
+    {
+      "model": "TRANSFORM.HeatAndMassTransfer.Examples.ExamplesFrom_NellisAndKlein.TransientResponseOfATankWall",
+      "variables": [
+        "wall.materials[1].T",
+        "wall.materials[10].T"
+      ]
     }
   ]
 }
