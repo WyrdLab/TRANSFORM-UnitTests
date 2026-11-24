@@ -467,6 +467,13 @@
           }
         ]
       }
+    },
+    {
+      "model": "TRANSFORMTest.Nuclear.ReactorKinetics.Isotopes_TeIXeU_Thermal",
+      "variables": [
+        "kXe.reactivity.phi",
+        "kXe.reactivity.rhos[3]"
+      ]
     }
   ]
 }
