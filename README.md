@@ -155,3 +155,20 @@ Error names no file (each is printed once), or `loadFile` failed; `2` setup
 error (no `omc`, the Modelica library did not load, the copy failed), timeout
 (`--timeout`, default 600 s), `omc` failed, or no result. Its unit tests use a fake `omc` and need no
 OpenModelica: `python3 -m unittest scripts/test_check_om_load.py`.
+
+## Package-structure check
+
+`scripts/check_package_files.py` fails when a folder under `TRANSFORM/` (outside
+`Resources/`) holds Modelica files or a `package.order` but no `package.mo`. No
+tool loads such a folder, so its classes cannot be used and it is dead code that
+looks alive; eight were removed in TRANSFORM 1.4.0. Run it with the conversion
+guard before merging any library PR that changes `TRANSFORM/` (Python 3 only):
+
+```bash
+python3 scripts/check_package_files.py                  # library at ../TRANSFORM-Library
+python3 scripts/check_package_files.py --library PATH
+```
+
+Exit codes: `0` pass; `1` one or more such folders (each is printed); `2` setup
+error (no `TRANSFORM/package.mo`). Unit tests:
+`python3 -m unittest scripts/test_check_package_files.py`.
