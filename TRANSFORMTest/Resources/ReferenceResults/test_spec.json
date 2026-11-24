@@ -422,6 +422,51 @@
           }
         ]
       }
+    },
+    {
+      "model": "TRANSFORMTest.Fluid.Machines.Pump_ImpellerTrim",
+      "description": "With impellerScaling = Trimmed, a pump trimmed to 0.9 of its nominal diameter at the similar point follows the trimming laws (head D^2, power D^3, same efficiency) in Pump (head, power and efficiency curves) and Pump_Controlled (head and power curves, and its Quadratic curve): each gap must be within 1e-4 (they are below 1e-5).",
+      "metrics": {
+        "combinator": "and",
+        "children": [
+          {
+            "metric": "range",
+            "variable": "unitTests.x[1]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[2]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[3]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[4]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[5]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          },
+          {
+            "metric": "range",
+            "variable": "unitTests.x[6]",
+            "min_value": -0.0001,
+            "max_value": 0.0001
+          }
+        ]
+      }
     }
   ]
 }
